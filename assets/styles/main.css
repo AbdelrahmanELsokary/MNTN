@@ -3,7 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+:root {
+  --black: black;
+  --white: #ffffff;
+  --jasmine: #fbd784;
+  --bg: rgb(27, 27, 47);
+}
 .container {
   padding: 15px 0;
   margin: auto;
