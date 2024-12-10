@@ -4,17 +4,18 @@
   box-sizing: border-box;
 }
 :root {
-  --black: black;
   --white: #ffffff;
+  --black: #000000;
   --jasmine: #fbd784;
-  --bg: rgb(11, 11, 32);
+  --jasmin1: #fbd7842a;
+  --bg: #0b1d26;
 }
 .container {
   padding: 15px 0;
   margin: auto;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   background-color: var(--bg);
 }
 a {
@@ -104,7 +105,8 @@ header .container input {
   }
 }
 @media (min-width: 992px) {
-  header .container nav label {
+  header .container nav label,
+  input {
     display: none;
   }
   header .container nav ul {
@@ -133,7 +135,6 @@ header .container input {
   color: var(--jasmine);
   padding-left: 70px;
 }
-
 .hero .container h1 {
   text-transform: capitalize;
   font-size: 50px;
@@ -154,6 +155,8 @@ header .container input {
 .information_us .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 100px;
 }
 .information_us .container article {
   display: flex;
@@ -166,6 +169,7 @@ header .container input {
 p,
 a {
   padding-top: 15px;
+  line-height: 1.5;
 }
 .information_us .container article a {
   display: flex;
@@ -175,7 +179,39 @@ a {
 .information_us .container article a img {
   padding-left: 10px;
 }
-.information_us .container::before{
-  content: "";
-  
+.information_us .container article h2 {
+  position: relative;
+}
+.information_us .container article h2::before {
+  content: "01";
+  position: absolute;
+  top: -105px;
+  left: -50px;
+  font-size: 120px;
+  z-index: -1;
+  color: var(--jasmin1);
+}
+.information_us .container.container2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 70px;
+}
+.information_us .container.container2 article h2::before {
+  content: "02";
+  position: absolute;
+  top: -105px;
+  left: -50px;
+  font-size: 120px;
+  z-index: -1;
+  color: var(--jasmin1);
+}
+.information_us .container.container3 article h2::before {
+  content: "03";
+  position: absolute;
+  top: -105px;
+  left: -50px;
+  font-size: 120px;
+  z-index: -1;
+  color: var(--jasmin1);
 }
